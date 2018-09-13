@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import * as types from './action-types';
+
 export function loadColor() {
     return(dispatch)=>{
         return axios.get("http://www.colr.org/json/color/random").then((response)=>{
@@ -10,7 +12,7 @@ export function loadColor() {
 
 export function changeColor(color){
     return{
-        type: "CHANGE_COLOR",
+        type: types.CHANGE_COLOR,
         color
     }
 }
