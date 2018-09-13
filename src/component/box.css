@@ -1,0 +1,17 @@
+.wrapper {
+    height: 300px;;
+    width: 40%;
+    background-color: #fff;
+
+    margin: auto;
+    padding: 70px 0;
+}
+
+.box{
+    margin: auto;
+}
+
+.boxy-button{
+    height: 50px;
+    width: 150px;
+}
