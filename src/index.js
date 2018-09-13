@@ -4,6 +4,14 @@ import './index.css';
 
 import BoxCon from './container/box-container';
 
+import {createStore, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
+import reducers from './reducers/index';
+
+let store = createStore(reducers, applyMiddleware(thunk));
+
+
 class App extends Component{
     render(){
         return(
@@ -14,4 +22,4 @@ class App extends Component{
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
